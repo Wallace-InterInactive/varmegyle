@@ -16,211 +16,248 @@ import {
 // data sources
 // - https://mapsvg.com/maps/hungary
 
-export type VarmegyeCode = "ba" | "be" | "bk" | "bu" | "bz" | "cs" | "fe" | "gs" | "hb" | "he"
-                         | "jn" | "ke" | "no" | "pe" | "sb" | "so" | "to" | "va" | "ve" | "za";
+export type VarmegyeCode =
+  | "ba"
+  | "be"
+  | "bk"
+  | "bu"
+  | "bz"
+  | "cs"
+  | "fe"
+  | "gs"
+  | "hb"
+  | "he"
+  | "jn"
+  | "ke"
+  | "no"
+  | "pe"
+  | "sb"
+  | "so"
+  | "to"
+  | "va"
+  | "ve"
+  | "za";
 const listOfVarmegyeCodes: VarmegyeCode[] = [
-  "ba", "be", "bk", "bu", "bz", "cs", "fe", "gs", "hb", "he", 
-  "jn", "ke", "no", "pe", "so", "sb", "to", "va", "ve", "za"
+  "ba",
+  "be",
+  "bk",
+  "bu",
+  "bz",
+  "cs",
+  "fe",
+  "gs",
+  "hb",
+  "he",
+  "jn",
+  "ke",
+  "no",
+  "pe",
+  "so",
+  "sb",
+  "to",
+  "va",
+  "ve",
+  "za",
 ];
 
 const dataBankData: Record<VarmegyeCode, PotData> = {
   ba: {
     capital: "capital-ba",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
+    neighbors: ["so", "to", "bk"],
     coordinates: { latitude: 46.022909, longitude: 18.190504 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   be: {
     capital: "capital-be",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 49.25, longitude: -84.5, },
+    neighbors: ["cs", "jn", "hb"],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   bk: {
     capital: "capital-bk",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 49.25, longitude: -84.5, },
+    neighbors: ["ba", "to", "fe", "pe", "jn", "cs" ],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   bu: {
     capital: "capital-bu",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 49.25, longitude: -84.5, },
+    neighbors: ["pe"],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   bz: {
     capital: "capital-bz",
-    neighbors: ["galway", "limerick", "tipperary"],
-    coordinates: {  latitude: 49.25, longitude: -84.5, },
+    neighbors: ["no", "he", "jn", "hb", "sb"],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   cs: {
     capital: "capital-cs",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 49.25, longitude: -84.5, },
+    neighbors: ["bk", "jn", "be"],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   fe: {
     capital: "capital-fe",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 47.140147, longitude: 18.540537, },
+    neighbors: ["pe", "ke", "ve", "so", "to", "bk"],
+    coordinates: { latitude: 47.140147, longitude: 18.540537 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   gs: {
     capital: "capital-gs",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 47.658181, longitude: 17.448908, },
+    neighbors: ["ke", "ve", "va"],
+    coordinates: { latitude: 47.658181, longitude: 17.448908 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   hb: {
     capital: "capital-hb",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 49.25, longitude: -84.5, },
+    neighbors: ["be", "jn", "bz", "sb"],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   he: {
     capital: "capital-he",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 49.25, longitude: -84.5, },
+    neighbors: ["no", "pe", "jn", "bz"],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   jn: {
     capital: "capital-jn",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 49.25, longitude: -84.5, },
+    neighbors: ["he", "bz", "hb", "be", "cs", "bk", "pe"],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   ke: {
     capital: "capital-ke",
-    neighbors: ["cork", "limerick"],
-    coordinates: {      latitude: 47.622063,longitude: 18.301800,},
+    neighbors: ["gs", "ve", "fe", "pe"],
+    coordinates: { latitude: 47.622063, longitude: 18.3018 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   no: {
     capital: "capital-no",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 49.25, longitude: -84.5, },
+    neighbors: ["bz", "he", "bu"],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   pe: {
     capital: "capital-pe",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 49.25, longitude: -84.5, },
+    neighbors: ["bu", "ke", "fe", "bk", "jn", "he", "no"],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
   so: {
     capital: "capital-so",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 46.466029, longitude: 17.603159, },
+    neighbors: ["fe", "to", "ba", "za", "ve"],
+    coordinates: { latitude: 46.466029, longitude: 17.603159 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
-  sb:  {
+  sb: {
     capital: "capital-sb",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 49.25, longitude: -84.5, },
+    neighbors: ["bz", "hb"],
+    coordinates: { latitude: 49.25, longitude: -84.5 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
-  to:  {
+  to: {
     capital: "capital-to",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 46.523209, longitude: 18.534604, },
+    neighbors: ["fe", "bk", "ba", "so"],
+    coordinates: { latitude: 46.523209, longitude: 18.534604 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
-  va:  {
+  va: {
     capital: "capital-va",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
+    neighbors: ["gs", "ve", "za"],
     coordinates: { latitude: 47.152252, longitude: 16.760706 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
-  ve:  {
+  ve: {
     capital: "capital-ve",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 47.111891, longitude: 17.626891, },
+    neighbors: ["gs", "ke", "fe", "so", "za", "va"],
+    coordinates: { latitude: 47.111891, longitude: 17.626891 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
-  za:  {
+  za: {
     capital: "capital-za",
-    neighbors: ["kerry", "waterford", "tipperary", "limerick" ],
-    coordinates: { latitude: 46.69031728684619, longitude: 16.8852945, },
+    neighbors: ["va", "ve", "so"],
+    coordinates: { latitude: 46.69031728684619, longitude: 16.8852945 },
     population: 15996989,
-    largestCities: [ { key: "city_lovas", population: 0 } ],
-    interestingFacts: [ ],
+    largestCities: [{ key: "city_lovas", population: 0 }],
+    interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
   },
@@ -230,7 +267,10 @@ export function getPotNamesByLang(tGeo: MyGeoMapping): string[] {
   return Object.keys(dataBank.data).map((code: string) => tGeo(code));
 }
 
-export function getPotNameByLang(potCode: VarmegyeCode, tGeo: MyGeoMapping): string {
+export function getPotNameByLang(
+  potCode: VarmegyeCode,
+  tGeo: MyGeoMapping
+): string {
   return tGeo(potCode); // lovas: as PotCode
 }
 
@@ -307,7 +347,7 @@ export function getPseudoRandomPotCode(n: number): string {
   return potCodes[idx2];
 }
 
- function isValidCode(currentGuess: string, tGeo: MyGeoMapping): boolean {
+function isValidCode(currentGuess: string, tGeo: MyGeoMapping): boolean {
   if (!currentGuess) {
     return false;
   }
@@ -350,5 +390,5 @@ export const dataBank: DataBank = {
   getPotCodeByName: getPotCodeByName,
   getPotNamesByLang: getPotNamesByLang,
   //getDistanceWithUnitBySetting:getDistanceWithUnitBySetting,
-  getDirectionEmoji:getDirectionEmoji,
+  getDirectionEmoji: getDirectionEmoji,
 };

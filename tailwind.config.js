@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./provincle/src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./provincle/src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -55,7 +59,11 @@ export default {
   plugins: [],
   /** check if safelist really needed, colors seemed to "get lost" sporadically */
   purge: {
-    content: ["./src/**/*.{js,jsx,ts,tsx}", "./provincle/src/**/*.{js,jsx,ts,tsx}","./public/index.html"],
+    content: [
+      "./src/**/*.{js,jsx,ts,tsx}",
+      "./provincle/src/**/*.{js,jsx,ts,tsx}",
+      "./public/index.html",
+    ],
     options: {
       safelist: [
         "border-green-700",
