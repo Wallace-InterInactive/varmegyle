@@ -46,7 +46,7 @@ function GameRoundVarmegye({
 
   function getPotMapSvgUrl(potCode: VarmegyeCode): string {
     //return `./varmegyle/assets/HU-${potCode.toUpperCase()}.svg`;
-    return new URL(`../assets/HU-${potCode.toUpperCase()}.svg`, import.meta.url)
+    return new URL(`../../../assets/HU-${potCode.toUpperCase()}.svg`, import.meta.url)
       .href;
   }
 
