@@ -60,9 +60,9 @@ export default {
   /** check if safelist really needed, colors seemed to "get lost" sporadically */
   purge: {
     content: [
+      "./public/index.html",
       "./src/**/*.{js,jsx,ts,tsx}",
       "./provincle/src/**/*.{js,jsx,ts,tsx}",
-      "./public/index.html",
     ],
     options: {
       safelist: [

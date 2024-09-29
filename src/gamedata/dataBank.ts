@@ -74,7 +74,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   be: {
     capital: "capital-be",
     neighbors: ["cs", "jn", "hb"],
-    coordinates: { latitude: 46.733189, longitude: 21.011640 },
+    coordinates: { latitude: 46.733189, longitude: 21.01164 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -83,7 +83,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   },
   bk: {
     capital: "capital-bk",
-    neighbors: ["ba", "to", "fe", "pe", "jn", "cs" ],
+    neighbors: ["ba", "to", "fe", "pe", "jn", "cs"],
     coordinates: { latitude: 46.637382, longitude: 19.460698 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
@@ -144,7 +144,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   hb: {
     capital: "capital-hb",
     neighbors: ["be", "jn", "bz", "sb"],
-    coordinates: { latitude: 47.479596, longitude: 21.547440 },
+    coordinates: { latitude: 47.479596, longitude: 21.54744 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
