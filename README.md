@@ -1,2 +1,2 @@
-# Eirele
-The geography quiz app about Ireland, insipred by worldle &amp; Provincle
+# Vármegyle
+The geography quiz app about Hungary, insipred by worldle &amp; Provincle

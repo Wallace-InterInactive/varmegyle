@@ -1,8 +1,6 @@
 import { FormEvent, useState, useEffect } from "react";
 import { dataBank, VarmegyeCode } from "../../gamedata/dataBank.ts";
-import {
-  sanitizeString,
-} from "../../../provincle/src/utils/utils.ts";
+import { sanitizeString } from "../../../provincle/src/utils/utils.ts";
 import { useTranslation } from "react-i18next";
 import { GameRoundProps } from "../../../provincle/src/types/GameRoundProps.ts";
 import { GameRoundResult, PotCode } from "../../../provincle/src/types/data.ts";
@@ -45,9 +43,13 @@ function GameRoundVarmegye({
   };
 
   const [currentGuess, setCurrentGuess] = useState("");
+
   function getPotMapSvgUrl(potCode: VarmegyeCode): string {
-    //return `./varmegyle/assets/${potCode.toUpperCase()}/HU-${potCode.toUpperCase()}.svg`;
-    return `./varmegyle/assets/HU-${potCode.toUpperCase()}.svg`;
+    //return `./varmegyle/assets/HU-${potCode.toUpperCase()}.svg`;
+    return new URL(
+      `../../../assets/HU-${potCode.toUpperCase()}.svg`,
+      import.meta.url
+    ).href;
   }
 
   useEffect(() => {

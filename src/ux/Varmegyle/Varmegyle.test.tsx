@@ -3,8 +3,8 @@ import { Varmegyle } from "./Varmegyle.tsx";
 import { render, screen } from "@testing-library/react";
 
 describe("test the game title", () => {
-  it("renders the Eirele component", () => {
+  it("renders the Varmegyle component", () => {
     render(<Varmegyle />);
-    expect(screen.getByTestId("eirele")).toBeTypeOf("object");
+    expect(screen.getByTestId("varmegyle")).toBeTypeOf("object");
   });
 });
