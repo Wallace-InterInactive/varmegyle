@@ -4,7 +4,7 @@ export function Varmegyle() {
     <span
       className="uppercase font-bold"
       style={{ color: "lightgrey" }}
-      data-testid="eirele"
+      data-testid="varmegyle"
     >
       <span style={{ color: "#CE2939" }}>Vár</span>
       <span style={{ color: "white" }}>megy</span>
