@@ -74,7 +74,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   be: {
     capital: "capital-be",
     neighbors: ["cs", "jn", "hb"],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 46.733189, longitude: 21.011640 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -84,7 +84,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   bk: {
     capital: "capital-bk",
     neighbors: ["ba", "to", "fe", "pe", "jn", "cs" ],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 46.637382, longitude: 19.460698 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -94,7 +94,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   bu: {
     capital: "capital-bu",
     neighbors: ["pe"],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 47.478964, longitude: 19.126102 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -104,7 +104,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   bz: {
     capital: "capital-bz",
     neighbors: ["no", "he", "jn", "hb", "sb"],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 48.220652, longitude: 20.976244 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -114,7 +114,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   cs: {
     capital: "capital-cs",
     neighbors: ["bk", "jn", "be"],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 46.453168, longitude: 20.233688 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -144,7 +144,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   hb: {
     capital: "capital-hb",
     neighbors: ["be", "jn", "bz", "sb"],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 47.479596, longitude: 21.547440 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -154,7 +154,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   he: {
     capital: "capital-he",
     neighbors: ["no", "pe", "jn", "bz"],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 47.804578, longitude: 20.227342 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -164,7 +164,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   jn: {
     capital: "capital-jn",
     neighbors: ["he", "bz", "hb", "be", "cs", "bk", "pe"],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 47.221602, longitude: 20.481207 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -184,7 +184,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   no: {
     capital: "capital-no",
     neighbors: ["bz", "he", "bu"],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 47.983197, longitude: 19.519957 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -194,7 +194,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   pe: {
     capital: "capital-pe",
     neighbors: ["bu", "ke", "fe", "bk", "jn", "he", "no"],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 47.450066, longitude: 19.305458 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
@@ -214,7 +214,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
   sb: {
     capital: "capital-sb",
     neighbors: ["bz", "hb"],
-    coordinates: { latitude: 49.25, longitude: -84.5 },
+    coordinates: { latitude: 47.999807, longitude: 22.148213 },
     population: 15996989,
     largestCities: [{ key: "city_lovas", population: 0 }],
     interestingFacts: [],
