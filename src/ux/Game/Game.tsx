@@ -1,4 +1,5 @@
 import { useState } from "react";
+//import Cookies from "js-cookie";
 import defaultGameState from "../../gamedata/gameState.ts";
 import {
   GameRoundStatus,
@@ -6,8 +7,14 @@ import {
   GameState,
   GameRoundResult,
 } from "../../../provincle/src/types/data.ts";
-import { getTodaysPotCode } from "../../gamedata/dataBank.ts"; // lovas: see below use
-import GameRoundVarmegye from "../GameRoundVarmegye/GameRoundVarmegye.tsx";
+import { useTranslation } from "react-i18next";
+import {
+  dataBank,
+  getTodaysPotCode,
+  getPotMapSvgUrl,
+} from "../../gamedata/dataBank.ts"; // lovas: see below use
+import GameRoundPot from "../../../provincle/src/components/GameRoundPot/GameRoundPot.tsx";
+//import GameRoundVarmegye from "../GameRoundVarmegye/GameRoundVarmegye.tsx";
 // import GameRoundFlag from "../GameRoundFlag/GameRoundFlag.tsx";
 // import GameRoundCapital from "../GameRoundCapital/GameRoundCapital.tsx";
 // import GameRoundNeighbors from "../GameRoundNeighbors/GameRoundNeighbors.tsx";
@@ -24,22 +31,40 @@ import { NextRoundButton } from "../../../provincle/src/components/NextRoundButt
 // prettier-ignore
 function initGameState(): GameState {
   const ret = defaultGameState;
-  ret.potCode = getTodaysPotCode();
-  console.log(`init: potcode:${ret.potCode}`);
-  ret.rounds.set("pot",       { i18nId: "gamePotRoundInstruction",      result: GameRoundResult.NotStarted });
-  ret.rounds.set("neighbors", { i18nId: "gameNeighborRoundInstruction", result: GameRoundResult.NotStarted, });
-  ret.rounds.set("capital",   { i18nId: "gameCapitalRoundInstruction",  result: GameRoundResult.NotStarted, });
-  ret.rounds.set("flag",      { i18nId: "gameFlagRoundInstruction",     result: GameRoundResult.NotStarted, });
+  //const newPotCode = getTodaysPotCode();
+  //const savedState = Cookies.get('gameState') as GameState;
+
+  if (true) {
+  //if (!savedState || savedState.potCode != newPotCode) {
+    console.log(`init: potcode:${ret.potCode}`);
+    ret.potCode = getTodaysPotCode(); // lovas: shall we raise here?
+    ret.rounds.set("pot",       { i18nId: "gamePotRoundInstruction",      result: GameRoundResult.NotStarted });  // TODO lovas
+    ret.rounds.set("neighbors", { i18nId: "gameNeighborRoundInstruction", result: GameRoundResult.NotStarted, });
+    ret.rounds.set("capital",   { i18nId: "gameCapitalRoundInstruction",  result: GameRoundResult.NotStarted, });
+    ret.rounds.set("flag",      { i18nId: "gameFlagRoundInstruction",     result: GameRoundResult.NotStarted, });
+  } else {
+    console.log(`init: loaded gameState: potCode:${ret.potCode}`);
+  }
+
   return ret;
 }
 
 export function Game() {
   const [gameState, setGameState] = useState(() => initGameState()); // warning: useState(initGameState()) sux!
+  // const [gameState, setGameState] = useState(() => {   // initGameState()); // warning: useState(initGameState()) sux!
+  //   // Try to load game state from cookies or set an initial state
+  //   const savedState = Cookies.get('gameState');
+  //   return savedState ? JSON.parse(savedState) :initGameState();
+  // });
+
+  dataBank.tLang = useTranslation().t;
+  dataBank.tGeo = useTranslation("geo").t;
+  dataBank.getPotMapSvgUrl = getPotMapSvgUrl; // ??? maybe because of VITE or React or URL
 
   /* eslint-disable @typescript-eslint/no-explicit-any */
   const updateGameState = (key: string, val: any): void => {
-    setGameState(prevState => ({
-      ...prevState,
+    setGameState(gameState => ({
+      ...gameState,
       [key]: val,
     }));
   };
@@ -98,10 +123,11 @@ export function Game() {
     <>
       <div>
         {currentRound === 1 ? (
-          <GameRoundVarmegye
+          <GameRoundPot
             gameRoundId="pot"
             gameState={gameState}
             currentRoundStatus={currentRoundStatus}
+            dataBank={dataBank}
             setCurrentRoundStatus={setCurrentRoundStatus}
             setRoundResult={setRoundResult}
           />

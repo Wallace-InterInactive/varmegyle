@@ -4,6 +4,7 @@ import {
   sanitizeString,
   // getTodaysCodeIndex,
   directionEmojiMap,
+  defaultTFunction,
 } from "../../provincle/src/utils/utils.ts";
 import {
   calculateAngle,
@@ -70,6 +71,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["aa"],
   },
   be: {
     capital: "capital-be",
@@ -80,6 +82,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["bb"],
   },
   bk: {
     capital: "capital-bk",
@@ -90,6 +93,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["cc"],
   },
   bu: {
     capital: "capital-bu",
@@ -100,6 +104,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["dd"],
   },
   bz: {
     capital: "capital-bz",
@@ -110,6 +115,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["ee"],
   },
   cs: {
     capital: "capital-cs",
@@ -120,6 +126,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["ff"],
   },
   fe: {
     capital: "capital-fe",
@@ -130,6 +137,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["gg"],
   },
   gs: {
     capital: "capital-gs",
@@ -140,6 +148,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["hh"],
   },
   hb: {
     capital: "capital-hb",
@@ -150,6 +159,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["ii"],
   },
   he: {
     capital: "capital-he",
@@ -160,6 +170,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["jj"],
   },
   jn: {
     capital: "capital-jn",
@@ -170,6 +181,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["kk"],
   },
   ke: {
     capital: "capital-ke",
@@ -180,6 +192,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["ll"],
   },
   no: {
     capital: "capital-no",
@@ -190,6 +203,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["mm"],
   },
   pe: {
     capital: "capital-pe",
@@ -200,6 +214,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["kppk"],
   },
   so: {
     capital: "capital-so",
@@ -210,6 +225,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["qq"],
   },
   sb: {
     capital: "capital-sb",
@@ -220,6 +236,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["qq"],
   },
   to: {
     capital: "capital-to",
@@ -230,6 +247,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["rr"],
   },
   va: {
     capital: "capital-va",
@@ -240,6 +258,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["ss"],
   },
   ve: {
     capital: "capital-ve",
@@ -250,6 +269,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["rr"],
   },
   za: {
     capital: "capital-za",
@@ -260,6 +280,7 @@ const dataBankData: Record<VarmegyeCode, PotData> = {
     interestingFacts: [],
     highestPoint: "Ishpatina Ridge 693m",
     coastlineInKM: 3840,
+    majorLeagueTeams: ["zz"],
   },
 };
 
@@ -383,12 +404,55 @@ export function getDirectionEmoji( // todo: CountyCode?
   // return directionEmojiMap.get(direction) as string;
 }
 
+export function getPotMapSvgUrl(potCode: VarmegyeCode): string {
+  //return `./varmegyle/assets/HU-${potCode.toUpperCase()}.svg`;
+  let ret = new URL(
+    `../../assets/HU-${potCode.toUpperCase()}.svg`,
+    import.meta.url
+  ).href;
+  console.log(`getPotMap(${potCode}) -> ${ret}`);
+  return ret;
+}
+export function getPotFlagSvgUrl(potCode: PotCode): string {
+  return new URL(
+    `../../assets/HU-${potCode.toUpperCase()}-flag.svg`,
+    import.meta.url
+  ).href;
+}
+
+export function getCapitals(tGeo: MyGeoMapping): string[] {
+  return Object.values(dataBank).map(
+    (entry: PotData) => tGeo(entry.capital) // tGeo(`capital${code}`) ?
+  );
+}
+export function getCities(tGeo: MyGeoMapping): string[] {
+  const retVal = ["Miskolc", "Tapolca"]; // getLargestCities(tGeo);
+  getCapitals(tGeo).forEach((cap: string) => {
+    if (!retVal.includes(cap)) {
+      retVal.push(cap);
+    }
+  });
+  retVal.sort();
+
+  return retVal;
+}
+function getGuessEmoji(): string {
+  return "\u{1F1ED}\u{1F1FA}";
+}
+
 //export default dataBank;
 export const dataBank: DataBank = {
   data: dataBankData,
   isValidCode: isValidCode,
   getPotCodeByName: getPotCodeByName,
   getPotNamesByLang: getPotNamesByLang,
+  getPotMapSvgUrl: getPotMapSvgUrl, // warning: does not work as I'd expect
+  getPotFlagSvgUrl: getPotFlagSvgUrl,
+  getCities: getCities,
+
   //getDistanceWithUnitBySetting:getDistanceWithUnitBySetting,
   getDirectionEmoji: getDirectionEmoji,
+  getGuessEmoji: getGuessEmoji,
+  tLang: defaultTFunction, // warning: to be set in Game.tsx
+  tGeo: defaultTFunction, // warning: to be set in Game.tsx
 };
