@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Cookies from "js-cookie";
+//import Cookies from "js-cookie";
 import defaultGameState from "../../gamedata/gameState.ts";
 import {
   GameRoundStatus,

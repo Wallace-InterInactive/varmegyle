@@ -19,8 +19,8 @@ i18next
           giveUp: "Give up",
           areYouSure: "Are you sure",
           nextRound: "Next Round",
-          province: "Province",
-          territory: "Territory",
+          province: "vármegye",
+          territory: "county",
           provinceOrTerritory: "Province or Territory",
           capitalCity: "Capital City",
           attempts: "Attempts",
@@ -35,6 +35,7 @@ i18next
           unknownCity: "Unknown city!",
           alreadyGuessed: "Already Guessed!",
           guessedIt: "Spot on!",
+          guessedItList: ["Spot on!", "Well done!", "Awesome!"],
           failedIt: "Sorry, you missed it!",
         },
         geo: {
@@ -102,6 +103,7 @@ i18next
           unknownCity: "Ville inconnue!",
           alreadyGuessed: "Déjà deviné!",
           guessedIt: "Gratulálok!",
+          guessedItList: ["Gratulálok", "Szuper", "Ez az!"],
           failedIt: "Sebaj, majd legközelebb",
         },
         geo: {
